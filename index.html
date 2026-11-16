@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Sir Cliff!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="beam l"></div><div class="beam r"></div>
+
+<!-- SETUP -->
+<div class="stage on" id="setup">
+  <div class="card">
+    <h1>🎁 Gift for Sir Cliff</h1>
+    <p>Music and photos are all set. Press start and hand the device to Sir Cliff!</p>
+    <label class="pick">🎵 Background music<small id="musicName">✔ John Mayer – You’re Gonna Live Forever in Me (tap to change)</small>
+      <input type="file" id="musicIn" accept="audio/*"></label>
+    <div class="pick" style="cursor:default">📸 7 photos ready<small>Already added to the page</small></div>
+    <button id="startBtn">▶ Start the surprise</button>
+  </div>
+</div>
+
+<!-- STAGE 1: MESSAGE (filled by JS) -->
+<div class="stage" id="msgStage"><div class="msg" id="msgBox"></div></div>
+
+<!-- STAGE 2: PHOTOS -->
+<div class="stage" id="picStage"></div>
+
+<!-- STAGE 3: FINALE -->
+<div class="stage finale" id="finale">
+  <svg id="cake" viewBox="0 0 200 190" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="100" cy="178" rx="92" ry="9" fill="#00000055"/>
+    <rect x="20" y="125" width="160" height="50" rx="10" fill="#e8607a"/>
+    <path d="M20 135q10 14 20 0t20 0 20 0 20 0 20 0 20 0 20 0 20 0v-10H20z" fill="#fff7ea"/>
+    <rect x="42" y="82" width="116" height="44" rx="9" fill="#f5c76b"/>
+    <path d="M42 92q9 12 19 0t19 0 19 0 19 0 19 0 19 0v-10H42z" fill="#fff7ea"/>
+    <rect x="64" y="45" width="72" height="38" rx="8" fill="#b06ad8"/>
+    <path d="M64 54q9 11 18 0t18 0 18 0 18 0v-9H64z" fill="#fff7ea"/>
+    <g fill="#5ec8e5"><rect x="78" y="25" width="7" height="20"/><rect x="96" y="25" width="7" height="20"/><rect x="114" y="25" width="7" height="20"/></g>
+    <g fill="#ffb02e"><ellipse class="flame" cx="81.5" cy="18" rx="4.5" ry="8"/><ellipse class="flame" cx="99.5" cy="18" rx="4.5" ry="8" style="animation-delay:-.1s"/><ellipse class="flame" cx="117.5" cy="18" rx="4.5" ry="8" style="animation-delay:-.2s"/></g>
+  </svg>
+  <div class="hbd" id="hbd"></div>
+  <div class="name">Sir Cliff! 🎉</div>
+  <div class="sub">With love, G11-Zipagan/Crisologo</div>
+</div>
+
+<div id="ctrl"><button id="prevBtn">◀ Back</button><span id="count"></span><button id="nextBtn">Next ▶</button></div>
+<audio id="bgm" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
